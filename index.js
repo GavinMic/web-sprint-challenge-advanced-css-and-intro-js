@@ -208,12 +208,12 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-const findFirstArtist=[];
+const fineFirstArtist=[];
 console.log(artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
 const findSecondArtist=[];
-console.log(artists[2].name);
+console.log(artists[2].bio); 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
@@ -230,11 +230,14 @@ console.log(artists);
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(array, number) {
-  if()
-  return `the artist at index ${id} is ${name}`;
+function getArtistByIndex(array, i)
+//the function is provided,and we must receive an array and the number. Number is filled using the index(i)
+{
+  return `the artist at index ${array[i].id} is ${array[i].name}`
+//The return will be done through a console.log, or just a return command with the name. This is general however, so the number and name isn't needed to be specified
+}
+console.log(getArtistByIndex);
 
-}  
 
 
 
@@ -246,8 +249,8 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(array){
+  
 }
 
 
