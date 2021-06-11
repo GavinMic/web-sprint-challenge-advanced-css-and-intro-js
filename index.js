@@ -292,16 +292,15 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array){
-  const newArtist= [...array];
-  newArtist.push({ 
-    "Id": 20,
-    "name": "Michael Gavin", 
-    "years": 2001-2021,
-    "genre": "Web Dev", 
-    "nationality": "American",
-    "bio": "I like computers, and coding helps me gain more knowledge and enjoyment within!"
+  array.push({ 
+    id: 20,
+    name: 'Michael Gavin', 
+    years: '2001-2021',
+    genre: 'Web Dev', 
+    nationality: 'American',
+    bio: "I like computers, and coding helps me gain more knowledge and enjoyment within!"
   });
-return newArtist.length;
+return array;
 }
     
 
@@ -313,14 +312,13 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array){
-  const didPaint= [];
+  const newArray=[];
   for (let i=0; i<array.length; i++){
-    const split= array[i].paintings.split(" ");
-    if(Number(split[i]>=100)){
-      didPaint.push(array[i].name);
+    if (array[i].paintings > 100){
+      newArray.push(array[1].name)
     }
   }
-  return didPaint;
+  return newArray;
 }
 
 
