@@ -233,7 +233,7 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
 function getArtistByIndex(array, i)
 //the function is provided,and we must receive an array and the number. Number is filled using the index(i)
 {
-  return `the artist at index ${array[i].id} is ${array[i].name}`
+  return `the artist at index ${array[i].id} is ${array[i].name}`;
 //The return will be done through a console.log, or just a return command with the name. This is general however, so the number and name isn't needed to be specified
 }
 
