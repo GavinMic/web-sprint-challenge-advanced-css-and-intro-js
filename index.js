@@ -211,11 +211,11 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 const fineFirstArtist=[];
-console.log(artists[0].name);
+console.log(array[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
 const findSecondArtist=[];
-console.log(artists[2].bio); 
+console.log(array[2].bio); 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
@@ -232,11 +232,8 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(array, i)
-//the function is provided,and we must receive an array and the number. Number is filled using the index(i)
-{
+function getArtistByIndex(array, i){
   return `the artist at index ${array[i].id} is ${array[i].name}`;
-//The return will be done through a console.log, or just a return command with the name. This is general however, so the number and name isn't needed to be specified
 }
 
 
@@ -250,7 +247,7 @@ Use get20s to do the following:
 
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
-function artistsLivingIn20thCentury(array){
+function artistCentury(array){
   const bornHere = [];
     for(let i = 0; i < array.length; i++){
       const split = array[i].years.split(" ");
@@ -271,13 +268,10 @@ return bornHere;
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, i){
-   for (let i=0; i<array.length; i++){
-     const remove = array[i].splice(" "); 
-      if(array[i](splice[i])){
-      //add a return statement!//
-      }
-   }
-}
+    array.splice(i, 1)
+    return array.length;
+ }
+
    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -300,17 +294,14 @@ function addArtist(array, key, string, update){
   const newArtist= [];
   newArtist.pull({
       id: 20,
-      name: Michael Gavin, 
+      name: MichaelGavin, 
       years: 2001 - 2021,
-      genre: Web Design, 
+      genre: WebDesign, 
       nationality: American,
-      bio: I enjoy computer arts!,
+      bio: Ienjoycomputerarts,
     });
     return newArtist;
   }
-    
-
-  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
