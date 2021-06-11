@@ -153,10 +153,26 @@ button:hover{
     line-height:1.2;
    }
    .title-container button{
-       size
+       size:absolute;
    }
    .title-container div{
     height:30vh;
     width:100%;
+    background-size: 250%;
+   }
+   .title-container.hr{
+       width:
+       margin-top:
+
+   }
+   .artists-container{
+       display:flex;
+       flex-direction:column;
+   }
+   .artist{
+       width:100%;
+       align-items:space-between;
+       font:1.1rem;
+       line-height:1rem;
    }
 }
