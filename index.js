@@ -315,7 +315,7 @@ function lotsOfArt(array){
   const newArray=[];
   for (let i=0; i<array.length; i++){
     if (array[i].paintings > 100){
-      newArray.push(array[1].name)
+      newArray.push(array[i].name)
     }
   }
   return newArray;
