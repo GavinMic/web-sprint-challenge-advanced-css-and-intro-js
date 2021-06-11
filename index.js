@@ -1,3 +1,5 @@
+import { loadPartialConfig } from "@babel/core";
+
 export const artists = [
     {
       "id": 0,
@@ -248,13 +250,15 @@ Use get20s to do the following:
 
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
-const bornHere = [];
-  for(let i = 0; i < array.length; i++){
-    const split = array[i].years.split(" ");
-        if(Number(split[0]) >= 1900 && Number(split[2]) <= 2000){ 
-      bornHere.push(array[i].name);
+function artistsLivingIn20thCentury(array){
+  const bornHere = [];
+    for(let i = 0; i < array.length; i++){
+      const split = array[i].years.split(" ");
+          if(Number(split[0]) >= 1900 && Number(split[2]) <= 2000){ 
+        bornHere.push(array[i].name);
   }
-  return bornHere; 
+  }
+return bornHere; 
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -266,8 +270,13 @@ const bornHere = [];
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(array, i){
+   for (let i=0; i<array.length; i++){
+     const remove = array[i].splice(" "); 
+      if(array[i](splice[i])){
+      //add a return statement!//
+      }
+   }
 }
    
 
@@ -287,9 +296,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(array, key, string, update){
+  const newArtist= [];
+  newArtist.pull({
+      id: 20,
+      name: Michael Gavin, 
+      years: 2001 - 2021,
+      genre: Web Design, 
+      nationality: American,
+      bio: I enjoy computer arts!,
+    });
+    return newArtist;
   }
+    
 
   
 

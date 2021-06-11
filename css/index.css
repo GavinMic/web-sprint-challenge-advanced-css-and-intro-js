@@ -136,22 +136,3 @@ button:hover{
 }
 
 /*Adding media queries*/
-@media (min-width:500px){
-    body/*fill in here*/
-}
-
-@media (min-width:500px){
-    header/*fill in here*/
-}
-
-@media (min-width:500px){
-    .title-container/*fill in here*/
-}
-
-@media (min-width:500px){
-    .artists-container/*fill in here*/
-}
-
-@media (min-width:500px){
-    script/*fill in here*/
-}
