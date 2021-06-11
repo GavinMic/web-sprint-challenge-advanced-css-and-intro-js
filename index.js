@@ -210,11 +210,11 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-const fineFirstArtist=[];
+const firstArtistName=[];
 console.log(artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
-const findSecondArtist=[];
+const thirdArtistbio=[];
 console.log(artists[2].bio); 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -247,7 +247,8 @@ Use get20s to do the following:
 
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
-function artistCentury(array){
+
+function get20s(array){
   const bornHere = [];
     for(let i = 0; i < array.length; i++){
       const split = array[i].years.split(" ");
@@ -290,18 +291,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(array, key, string, update){
-  const newArtist= [];
-  newArtist.pull({
-      id: 20,
-      name: MichaelGavin, 
-      years: 2001 - 2021,
-      genre: WebDesign, 
-      nationality: American,
-      bio: Ienjoycomputerarts,
-    });
-    return newArtist;
-  }
+function addArtist(array){
+  const newArtist= [...array];
+  newArtist.push({ 
+    "Id": 20,
+    "name": "Michael Gavin", 
+    "years": 2001-2021,
+    "genre": "Web Dev", 
+    "nationality": "American",
+    "bio": "I like computers, and coding helps me gain more knowledge and enjoyment within!"
+  });
+return newArtist.length;
+}
+    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -310,10 +312,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  const didPaint= [];
+  for (let i=0; i<array.length; i++){
+    const split= array[i].paintings.split(" ");
+    if(Number(split[i]>=100)){
+      didPaint.push(array[i].name);
+    }
+  }
+  return didPaint;
 }
-
 
 
 
